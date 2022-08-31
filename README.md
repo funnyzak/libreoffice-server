@@ -59,7 +59,7 @@
 2. 安装项目依赖，启动项目。
 
 ```bash
-npm install
+npm ci
 
 ## 开发启动
 npm run watch
