@@ -22,6 +22,8 @@
   - [必要条件](#必要条件)
   - [结构](#结构)
   - [运行](#运行)
+  - [用例](#用例)
+    - [CURL](#curl)
   - [接口](#接口)
   - [部署](#部署)
   - [参考](#参考)
@@ -69,6 +71,17 @@ npm start
 
 ## 测试覆盖
 npm run cov
+```
+
+## 用例
+
+### CURL
+
+```bash
+curl --request PUT \
+  --url 'http://localhost:2058/soffice/word2pdf?prefix=w2022' \
+  --header 'content-type: multipart/form-data' \
+  --form 'file=@/Users/potato/Desktop/sample.docx'
 ```
 
 ## 接口
