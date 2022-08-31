@@ -59,7 +59,7 @@
 2. 安装项目依赖，启动项目。
 
 ```bash
-npm install
+npm ci
 
 ## 开发启动
 npm run watch
@@ -87,6 +87,7 @@ npm run cov
 - [MongoDb](https://docs.mongodb.com/)
 - [sequelizejs](https://sequelize.org/master/manual/getting-started.html)
 - [Joi](https://joi.dev/api/)
+- [libreoffice-convert](https://github.com/elwerene/libreoffice-convert)
 
 ## 赞赏
 

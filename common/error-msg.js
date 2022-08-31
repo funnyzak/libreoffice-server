@@ -14,6 +14,8 @@ module.exports = {
   REQUEST_FILES: '上传文件发生错误',
   INVALID_TOKEN: '无效的令牌',
 
+  INVALID_FILE_TYPE: '无效的文件类型',
+
   NEED_LOGIN: '需要登录',
   USER_NOT_FOUND: '用户不存在'
 }
