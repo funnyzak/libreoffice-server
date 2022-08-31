@@ -1,0 +1,103 @@
+{
+  "name": "koa2-starter",
+  "version": "1.0.0",
+  "description": "koa2 quick start project",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node ./index",
+    "dev": "cross-env NODE_ENV=development nodemon --trace-warnings ./index",
+    "watch": "npm run dev",
+    "serve": "npm run dev",
+    "eslint": "eslint --cache --fix ./",
+    "test": "npx mocha ./test/**/*.test.js --exit --inspect=0.0.0.0:8888 --timeout 120000",
+    "cov": "nyc npm run test",
+    "prepare": "if [[ $NODE_ENV != \"production\" ]]; then husky install; fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/funnyzak/koa-starter.git"
+  },
+  "keywords": [
+    "nodejs",
+    "mysql",
+    "koa",
+    "mocha",
+    "mongodb",
+    "mysql",
+    "redis",
+    "koa2",
+    "test"
+  ],
+  "author": "Leon <silenceace@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/funnyzak/koa-starter/issues"
+  },
+  "homepage": "https://github.com/funnyzak/koa-starter#readme",
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "ali-oss": "^6.16.0",
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.6",
+    "formidable": "^1.2.6",
+    "ioredis": "^4.28.3",
+    "joi": "^17.5.0",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-cors": "^0.0.16",
+    "koa-favicon": "^2.1.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^10.1.1",
+    "koa-session": "^6.2.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^8.0.0",
+    "lodash": "^4.17.21",
+    "mocha": "^9.2.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.3.1",
+    "mysql2": "^2.3.3",
+    "redis": "^4.0.2",
+    "sequelize": "^6.14.1",
+    "time-formater": "^1.1.3",
+    "uuid": "^8.3.2",
+    "winston": "^3.4.0",
+    "winston-daily-rotate-file": "^4.5.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.2.1",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0",
+    "power-assert": "^1.6.1",
+    "prettier": "^2.5.1",
+    "supertest": "^6.2.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3
+        }
+      ]
+    ]
+  },
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 7.10.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ],
+    "*.{md,html,json,css,less,scss,sass}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
