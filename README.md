@@ -87,6 +87,7 @@ npm run cov
 - [MongoDb](https://docs.mongodb.com/)
 - [sequelizejs](https://sequelize.org/master/manual/getting-started.html)
 - [Joi](https://joi.dev/api/)
+- [libreoffice-convert](https://github.com/elwerene/libreoffice-convert)
 
 ## 赞赏
 
