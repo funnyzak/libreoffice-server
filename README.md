@@ -73,11 +73,11 @@ npm run cov
 
 ## 接口
 
-已经实现的接口，已梳理为接口文档，托管在[APIPOST](<(https://docs.apipost.cn/preview/360b0518f5e2805e/4d5c697edb4e2b6b)>)，[在线查看](https://docs.apipost.cn/preview/360b0518f5e2805e/4d5c697edb4e2b6b)。
+已经实现的接口，已梳理为接口文档，托管在[APIPOST](<(hhttps://console-docs.apipost.cn/preview/cdf94b1afb4dff14/6254d2b2fe5faa73)>)，[在线查看](hhttps://console-docs.apipost.cn/preview/cdf94b1afb4dff14/6254d2b2fe5faa73)。
 
 ## 部署
 
-- [通过 Docker-Compose 完成自动化部署](https://github.com/funnyzak/koa-quick-start/tree/master/deploy/docker)
+- [通过 Docker-Compose 完成自动化部署](https://github.com/funnyzak/libreoffice-server/tree/main/deploy/docker)
 
 ## 参考
 

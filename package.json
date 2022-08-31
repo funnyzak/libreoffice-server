@@ -1,7 +1,7 @@
 {
-  "name": "koa2-starter",
+  "name": "libreoffice-server",
   "version": "1.0.0",
-  "description": "koa2 quick start project",
+  "description": "Libreoffice File Conversion Web Server",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./index",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/funnyzak/koa-starter.git"
+    "url": "git+ssh://git@github.com/funnyzak/libreoffice-server.git"
   },
   "keywords": [
     "nodejs",
@@ -31,9 +31,9 @@
   "author": "Leon <silenceace@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/funnyzak/koa-starter/issues"
+    "url": "https://github.com/funnyzak/libreoffice-server/issues"
   },
-  "homepage": "https://github.com/funnyzak/koa-starter#readme",
+  "homepage": "https://github.com/funnyzak/libreoffice-server#readme",
   "dependencies": {
     "@koa/router": "^10.1.1",
     "ali-oss": "^6.16.0",
