@@ -2,9 +2,9 @@ const path = require('path')
 
 const config = {
   app: {
-    name: 'koa quick start',
-    host: 'http://127.0.0.1:2058', // app主页地址
-    port: 2058, // 服务启动监听端口
+    name: 'libreoffice web server',
+    host: 'http://127.0.0.1:3001', // app主页地址
+    port: 3001, // 服务启动监听端口
     upload: {
       // 文件上传临时文件夹
       tmpDir: path.join(__dirname, '../public/upload/tmp'),
@@ -12,7 +12,7 @@ const config = {
       saveDir: path.join(__dirname, '../public/upload'),
 
       // 虚拟路径
-      virtualPath: 'http://localhost:2058/upload',
+      virtualPath: 'http://localhost:3001/upload',
 
       // 云存储路径前缀 开头和结尾不带/
       cloudPathPrefix: 'transfer/static',
@@ -28,13 +28,14 @@ const config = {
           'image/png',
           'image/gif',
           'applicaiton/word',
+          'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
           'application/vnd.ms-excel',
           'application/pdf'
         ],
         // limit the amount of memory all fields together (except files) can allocate in bytes (单次最大请求文件总容量)
         maxFieldsSize: 1000 * 1024 * 1024, // 1G
         // limit the size of uploaded file (单个文件可上传最大大小)
-        maxFileSize: 100 * 1024 * 1024 // 100M
+        maxFileSize: 1000 * 1024 * 1024 // 100M
       }
     },
     apiUrlPrefix: '/api/v1', // 主api 路径前缀
