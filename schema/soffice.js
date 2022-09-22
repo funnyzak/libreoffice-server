@@ -9,6 +9,12 @@ const sofficePut = {
   }
 }
 
+const sofficePreview = {
+  query: {
+    url: [Joi.string().uri().required(), Joi.string().pattern(new RegExp('^http.+docx?$'))]
+  }
+}
+
 module.exports = {
   sofficePut
 }

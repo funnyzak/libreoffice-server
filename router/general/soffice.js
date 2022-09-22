@@ -1,7 +1,7 @@
 'use strict'
 
 const SOfficeCtl = require('../../controller/general/soffice')
-const { sofficePut } = require('../../schema/soffice')
+const { sofficePut, sofficePreview } = require('../../schema/soffice')
 const UploadMdw = require('../../middleware/upload')
 const _ = require('lodash')
 const config = require('../../config')
@@ -16,13 +16,19 @@ module.exports = [
       // 上传
       UploadMdw(
         _.merge(config.app.upload, {
-          keepOriginName: true,
+          keepOriginName: false,
           removeTmpFile: true,
           isSaveDir: true,
           savePrefix: 'document'
         })
       )
     ]
+  },
+  {
+    method: 'get',
+    path: '/soffice/preview',
+    checkParam: sofficePreview,
+    controller: SOfficeCtl.preview
   }
 ].map((router) => {
   router.checkParam = _.merge(router.checkParam)
