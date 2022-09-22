@@ -3,6 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
+const Downloader = require('nodejs-file-downloader')
 const _ = require('lodash')
 const config = require('../../config')
 const utils = require('../../lib/utils')
@@ -54,7 +55,32 @@ module.exports = {
         }
       })
     )
-
     ctx.body = finalFiles
+  },
+  preview: async (ctx) => {
+    logger.info({
+      type: LogType.CONTROLLER_INFO,
+      action: 'word preview',
+      data: ctx
+    })
+
+    const downloader = new Downloader({
+      url: ctx.query.url,
+      directory: config.app.upload.tmpDir,
+      fileName: new Date().getTime() + '.' + ctx.query.url.split('.').pop()
+    })
+
+    try {
+      const { filePath } = await downloader.download()
+      const pdfPath = filePath.split('.').slice(0, -1).join('.') + '.pdf'
+
+      await sofficeConvert(filePath, pdfPath, 'pdf')
+      ctx.set({
+        'content-type': 'application/pdf'
+      })
+      ctx.body = await fs.createReadStream(pdfPath)
+    } catch (error) {
+      throw new SysError(ErrorMsg.DOWNLOAD_FILE_ERROR, ErrorCode.DOWNLOAD_FILE_ERROR)
+    }
   }
 }
