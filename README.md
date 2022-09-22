@@ -78,10 +78,15 @@ npm run cov
 ### CURL
 
 ```bash
+# 上传word转换为pdf
 curl --request PUT \
   --url 'http://localhost:2058/soffice/word2pdf?prefix=w2022' \
   --header 'content-type: multipart/form-data' \
   --form 'file=@/Users/potato/Desktop/sample.docx'
+
+# 通过word url链接转换PDF，并返回文件流
+curl --request GET \
+  --url 'http://localhost:2058/soffice/preview?url=http://localhost:3001/upload/document/w2022/20220922/3dd78142-5250-486f-b66b-f4ad64e9f4a7.docx'
 ```
 
 ## 接口
