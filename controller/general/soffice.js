@@ -67,7 +67,7 @@ module.exports = {
     const downloader = new Downloader({
       url: ctx.query.url,
       directory: config.app.upload.tmpDir,
-      fileName: new Date().getTime() + '.' + ctx.query.url.split('.').pop()
+      fileName: new Date().getTime() + '.doc'
     })
 
     try {
