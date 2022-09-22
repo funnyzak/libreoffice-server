@@ -16,6 +16,8 @@ module.exports = {
 
   INVALID_FILE_TYPE: '无效的文件类型',
 
+  DOWNLOAD_FILE_ERROR: '下载文件失败',
+
   NEED_LOGIN: '需要登录',
   USER_NOT_FOUND: '用户不存在'
 }
