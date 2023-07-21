@@ -3,7 +3,7 @@ const path = require('path')
 const config = {
   app: {
     name: 'libreoffice web server',
-    host: 'http://127.0.0.1:3001', // app主页地址
+    host: 'http://127.0.0.1:8038', // app主页地址
     port: 3001, // 服务启动监听端口
     upload: {
       // 文件上传临时文件夹
