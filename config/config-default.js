@@ -4,7 +4,7 @@ const config = {
   app: {
     name: 'libreoffice web server',
     host: 'http://127.0.0.1:8038', // app主页地址
-    port: 3001, // 服务启动监听端口
+    port: 8038, // 服务启动监听端口
     upload: {
       // 文件上传临时文件夹
       tmpDir: path.join(__dirname, '../public/upload/tmp'),
@@ -12,7 +12,7 @@ const config = {
       saveDir: path.join(__dirname, '../public/upload'),
 
       // 虚拟路径
-      virtualPath: 'http://localhost:3001/upload',
+      virtualPath: 'http://localhost:8038/upload',
 
       // 云存储路径前缀 开头和结尾不带/
       cloudPathPrefix: 'transfer/static',
