@@ -36,7 +36,6 @@
   "homepage": "https://github.com/funnyzak/libreoffice-server#readme",
   "dependencies": {
     "@koa/router": "^10.1.1",
-    "ali-oss": "^6.16.0",
     "cross-env": "^7.0.3",
     "ejs": "^3.1.6",
     "formidable": "^2.0.1",
